@@ -11,5 +11,6 @@ RUN npm run build
 
 FROM nginx
 # change to --from=0 for AWS (and remove tag in 1 line)
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
